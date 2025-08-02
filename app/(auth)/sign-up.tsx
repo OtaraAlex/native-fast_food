@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, router } from "expo-router";
 import { View, Text, Alert } from "react-native";
 
+import { createUser } from "@/lib/appwrite";
 import CustomInput from "@/components/CustomInput";
 import CustomButton from "@/components/CustomButton";
 
@@ -21,9 +22,8 @@ const SignUp = () => {
     setIsSubmitting(true);
 
     try {
-      // CALL APPWRITE SIGN UP FUNCTION HERE
+      await createUser({ email, password, name });
 
-      Alert.alert("Success", "You have successfully signed up.");
       router.replace("/");
     } catch (error: any) {
       Alert.alert("Error", error.message);
