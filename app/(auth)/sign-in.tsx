@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, router } from "expo-router";
 import { View, Text, Alert } from "react-native";
+import * as Sentry from "@sentry/react-native";
 
 import { signIn } from "@/lib/appwrite";
 import CustomInput from "@/components/CustomInput";
@@ -27,6 +28,7 @@ const SignIn = () => {
       router.replace("/");
     } catch (error: any) {
       Alert.alert("Error", error.message);
+      Sentry.captureEvent(error);
     } finally {
       setIsSubmitting(false);
     }

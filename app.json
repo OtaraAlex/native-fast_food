@@ -33,6 +33,14 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "native-food_app",
+          "organization": "alx-africa-2e"
+        }
       ]
     ],
     "experiments": {
