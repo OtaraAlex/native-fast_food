@@ -14,7 +14,12 @@ export const appwriteConfig = {
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
   platform: "com.earlygetter.fastfood",
   databaseId: "688cd095003cc9661f3e",
+  bucketId: "6890e69d002cf3a8249c",
   userCollectionId: "688cd10c00056f0dba6e",
+  categoriesCollectionId: "6890dfa6002f6170db2c",
+  menuCollectionId: "6890e07200120e540b2b",
+  customizationsCollectionId: "6890e27b001ae5871936",
+  menuCustomizationsCollectionId: "6890e4be000c7e351a33",
 };
 
 export const client = new Client();
