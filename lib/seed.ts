@@ -74,7 +74,7 @@ async function uploadImageToStorage(imageUrl: string) {
     fileObj
   );
 
-  return storage.getFileViewURL(appwriteConfig.bucketId, file.$id);
+  return storage.getFilePreviewURL(appwriteConfig.bucketId, file.$id);
 }
 
 async function seed(): Promise<void> {
@@ -154,3 +154,13 @@ async function seed(): Promise<void> {
 }
 
 export default seed;
+
+//  Button to trigger seeding
+// <Button
+//         title="Seed"
+//         onPress={() =>
+//           seed().catch((error) =>
+//             console.log("Failed to seed the database, error:", error)
+//           )
+//         }
+//       />
